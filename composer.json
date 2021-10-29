@@ -1,0 +1,13 @@
+{
+    "name": "zinrax/estudos_php-laravel",
+    "description": "Busca de CEP online",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Uriel-David",
+            "email": "uriel.david.qaa@gmail.com"
+        }
+    ],
+    "require": {}
+}
