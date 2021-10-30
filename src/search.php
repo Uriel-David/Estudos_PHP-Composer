@@ -2,14 +2,31 @@
 
 namespace zinrax\estudosPHPLaravel;
 
-class Search {
-  private $url = "https://viacep.com.br/ws/";
+use zinrax\estudosPHPLaravel\ws\viaCep;
 
-  public function getAddressFromZipcode(string $zipCode): array {
-    $zipCode = preg_replace('/[^0-9]/im', '', $zipCode);
+class Search
+{
 
-    $get = file_get_contents($this->url.$zipCode."/json");
+    public function getAddressFromZipcode(string $zipCode): array
+    {
+        $zipCode = preg_replace('/[^0-9]/im', '', $zipCode);
 
-    return (array) json_decode($get);
-  }
+        return $this->getFromServer($zipCode);
+    }
+
+    private function getFromServer(string $zipCode): array
+    {
+        $get = new viaCep();
+
+        return $get->get($zipCode);
+    }
+
+    private function processData($data)
+    {
+        foreach ($data as $k => $v) {
+            $data[$k] = trim($v);
+        }
+
+        return $data;
+    }
 }
