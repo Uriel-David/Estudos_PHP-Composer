@@ -1,8 +1,8 @@
 <?php
 
-namespace zinrax\estudosPHPLaravel;
+namespace zinrax\Composer;
 
-use zinrax\estudosPHPLaravel\ws\viaCep;
+use zinrax\estudosPHPComposer\ws\viaCep;
 
 class Search
 {

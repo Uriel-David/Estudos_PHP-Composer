@@ -1,7 +1,7 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
-use zinrax\estudosPHPLaravel\Search;
+use zinrax\estudosPHPComposer\Search;
 
 class SearchTest extends TestCase {
 

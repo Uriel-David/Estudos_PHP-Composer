@@ -1,6 +1,6 @@
 <?php
 
-namespace zinrax\estudosPHPLaravel\ws;
+namespace zinrax\estudosPHPComposer\ws;
 
 class viaCep
 {
